@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getStudents } from "../services/studentService";
-import { getAttendance, addAttendance } from "../services/attendanceService";
+import { getAttendance, addAttendance } from "../Services/attendanceService";
 import "./Attendance.css";
 
 function Attendance() {
