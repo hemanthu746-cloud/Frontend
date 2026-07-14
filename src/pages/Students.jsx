@@ -4,7 +4,7 @@ import {
   addStudent,
   updateStudent,
   deleteStudent,
-} from "../services/studentService";
+} from "../Services/studentService";
 import "./Students.css";
 
 function Students() {
