@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getStudents } from "../services/studentService";
+import { getStudents } from "../Services/studentService";
 import { getAttendance, addAttendance } from "../Services/attendanceService";
 import "./Attendance.css";
 
