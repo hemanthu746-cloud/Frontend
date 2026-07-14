@@ -1,0 +1,65 @@
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f9;
+  color: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  padding: 20px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e5ebe7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f63b4e;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #011747;
+}

@@ -1,0 +1,163 @@
+/* ===========================
+   REPORTS PAGE
+=========================== */
+
+.reports-page{
+    padding:30px;
+    background:#f4f7fc;
+    min-height:100vh;
+}
+
+.reports-page h1{
+    font-size:40px;
+    margin-bottom:25px;
+    color:#222;
+}
+
+.reports-page h2{
+    margin:35px 0 20px;
+    color:#222;
+    font-size:30px;
+}
+
+/* ===========================
+   REPORT CARDS
+=========================== */
+
+.report-cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    margin-bottom:35px;
+}
+
+.report-card{
+    background:#fff;
+    padding:28px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.report-card:hover{
+    transform:translateY(-5px);
+}
+
+.report-card h2{
+    font-size:42px;
+    margin:0;
+}
+
+.report-card p{
+    margin-top:10px;
+    color:#555;
+    font-size:18px;
+}
+
+/* Card Colors */
+
+.total-student-card{
+    border-left:6px solid #7b2ff7;
+}
+
+.total-student-card h2{
+    color:#7b2ff7;
+}
+
+.present-card{
+    border-left:6px solid #28a745;
+}
+
+.present-card h2{
+    color:#28a745;
+}
+
+.absent-card{
+    border-left:6px solid #dc3545;
+}
+
+.absent-card h2{
+    color:#dc3545;
+}
+
+.total-card{
+    border-left:6px solid #2563eb;
+}
+
+.total-card h2{
+    color:#2563eb;
+}
+
+/* ===========================
+   TABLE
+=========================== */
+
+.report-table,
+.branch-table{
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    overflow-x:auto;
+}
+
+.report-table table,
+.branch-table table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.report-table th,
+.branch-table th{
+    background:#2563eb;
+    color:white;
+    padding:14px;
+    font-size:17px;
+}
+
+.report-table td,
+.branch-table td{
+    border:1px solid #ddd;
+    padding:14px;
+    text-align:center;
+}
+
+.report-table tbody tr:nth-child(even),
+.branch-table tbody tr:nth-child(even){
+    background:#f8f9fa;
+}
+
+.report-table tbody tr:hover,
+.branch-table tbody tr:hover{
+    background:#eef5ff;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1100px){
+
+.report-cards{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.report-cards{
+grid-template-columns:1fr;
+}
+
+.reports-page{
+padding:20px;
+}
+
+.report-table table,
+.branch-table table{
+min-width:800px;
+}
+
+}
