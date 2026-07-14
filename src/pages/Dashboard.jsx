@@ -24,29 +24,39 @@ function Dashboard() {
     "#775DD0",
   ];
 
+  const loadData = async () => {
+    try {
+      const [studentRes, attendanceRes] = await Promise.all([
+        getStudents(),
+        getAttendance(),
+      ]);
+
+      const studentData = Array.isArray(studentRes?.data) ? studentRes.data : [];
+      const attendanceData = Array.isArray(attendanceRes?.data)
+        ? attendanceRes.data
+        : [];
+
+      setStudents(studentData);
+      setAttendance(attendanceData);
+    } catch (err) {
+      console.error("Failed to load dashboard data:", err);
+      setStudents([]);
+      setAttendance([]);
+    }
+  };
+
   useEffect(() => {
     loadData();
   }, []);
 
-  const loadData = async () => {
-    try {
-      const studentRes = await getStudents();
-      const attendanceRes = await getAttendance();
-
-      setStudents(studentRes.data);
-      setAttendance(attendanceRes.data);
-    } catch (err) {
-      console.log(err);
-    }
-  };
 
   // Today's date
   const today = new Date().toISOString().split("T")[0];
 
   // Today's attendance only
-  const todayAttendance = attendance.filter(
-    (item) => item.date === today
-  );
+  const todayAttendance = Array.isArray(attendance)
+    ? attendance.filter((item) => item.date === today)
+    : [];
 
   const presentToday = todayAttendance.filter(
     (item) => item.status === "Present"
