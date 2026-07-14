@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { getStudents } from "../services/studentService";
-import { getAttendance } from "../services/attendanceService";
+import { getStudents } from "../Services/studentService";
+import { getAttendance } from "../Services/attendanceService";
 import {
   PieChart,
   Pie,
