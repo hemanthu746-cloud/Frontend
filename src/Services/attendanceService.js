@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://localhost:5000/attendance";
+const API = "https://backend-anz2.onrender.com";
 
 export const getAttendance = () => axios.get(API);
 
